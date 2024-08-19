@@ -9,7 +9,7 @@ public class playreControl : MonoBehaviour
     //変数宣言
     public float movespeed = 3;//移動速度
     float leftcoolTime = 0;//クールタイム(比較用)
-    float coolTime = 0.7f;//クールタイム(固定値)
+    float coolTime = 0.5f;//クールタイム(固定値)
 
     new Rigidbody2D rigidbody2D;
     Animator animator;
@@ -87,18 +87,22 @@ public class playreControl : MonoBehaviour
                 
             }
     }
-    IEnumerator  Deley()
+    IEnumerator  Deley() //攻撃の踏み込みをディレイさせる関数
     {
         yield return new WaitForSeconds(0.3f);
+        //ここに子オブジェの真偽切り替えを入れる
         Vector3 pos = transform.localScale;
         if (pos.x == -1)
         {
-            rigidbody2D.velocity = new Vector2(1 * movespeed, rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(2 * movespeed, rigidbody2D.velocity.y);
         }
         else if (pos.x == 1)
         {
-            rigidbody2D.velocity = new Vector2(-1 * movespeed, rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(-2 * movespeed, rigidbody2D.velocity.y);
         }
+        yield return new WaitForSeconds(0.2f);
+        rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
         leftcoolTime = coolTime;
+
     }
 }
