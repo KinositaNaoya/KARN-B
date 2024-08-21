@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 3
+  attckpoint: {fileID: 1082785689}
 --- !u!1 &221793609
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +797,7 @@ GameObject:
   - component: {fileID: 475128465}
   - component: {fileID: 475128464}
   - component: {fileID: 475128463}
+  - component: {fileID: 475128467}
   m_Layer: 0
   m_Name: big-crate (1)
   m_TagString: Enemy
@@ -942,6 +944,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &475128467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475128462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651c5259bde18a848ad9e0897c1a9257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1082785690
 Transform:
   m_ObjectHideFlags: 0
@@ -1167,6 +1182,7 @@ GameObject:
   - component: {fileID: 1512613406}
   - component: {fileID: 1512613405}
   - component: {fileID: 1512613404}
+  - component: {fileID: 1512613408}
   m_Layer: 0
   m_Name: big-crate
   m_TagString: Enemy
@@ -1313,6 +1329,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512613408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512613403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651c5259bde18a848ad9e0897c1a9257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 5
 --- !u!1 &1579517258
 GameObject:
   m_ObjectHideFlags: 0
