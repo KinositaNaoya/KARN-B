@@ -10,6 +10,7 @@ public class playreControl : MonoBehaviour
     public float movespeed = 3;//移動速度
     float leftcoolTime = 0;//クールタイム(比較用)
     float coolTime = 0.5f;//クールタイム(固定値)
+    [SerializeField] public GameObject attckpoint;
 
     new Rigidbody2D rigidbody2D;
     Animator animator;
@@ -91,6 +92,7 @@ public class playreControl : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         //ここに子オブジェの真偽切り替えを入れる
+        attckpoint.SetActive(true);
         Vector3 pos = transform.localScale;
         if (pos.x == -1)
         {
@@ -102,6 +104,7 @@ public class playreControl : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
+        attckpoint.SetActive(false);
         leftcoolTime = coolTime;
 
     }
