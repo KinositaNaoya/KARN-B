@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 3
+  attckpoint: {fileID: 0}
 --- !u!1 &221793609
 GameObject:
   m_ObjectHideFlags: 0

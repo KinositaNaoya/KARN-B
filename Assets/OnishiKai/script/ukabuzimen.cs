@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class ukabuzimen : MonoBehaviour
 
 
 
-    CircleCollider2D Ccol;
+    BoxCollider2D Box2D;
 
     //ƒNƒŠƒbƒN‚µ‚½‰ñ”‚ğ•Û‘¶‚·‚é‚ÌŠÖ”
     double Clicktimer;
@@ -21,22 +22,26 @@ public class ukabuzimen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Ccol = GetComponent<CircleCollider2D>();
+        Box2D = GetComponent<BoxCollider2D>();
         //ŠÔ‚ğ‰Šú‰»
         Clicktimer = Time.time;
     }
 
     // Update is called once per frame
+
+
+
+    //S‚ğ2‰ñ‰Ÿ‚µ‚½‚ÉisTrgger‚ğtrue‚É‚µ‚Ä“–‚½‚è”»’è‚ğÁ¸‚³‚¹‚é
     void Update()
     {
-        if(!Ccol.isTrigger&& Input.GetKeyDown(KeyCode.S))
+        if(!Box2D.isTrigger&& Input.GetKeyDown(KeyCode.S))
         {
             double interval = Clicktimer - Clickcooltime;
 
             if(interval<Clickcooltime)
             {
 
-                Ccol.isTrigger = true;
+                Box2D.isTrigger = true;
 
 
             }
@@ -44,9 +49,11 @@ public class ukabuzimen : MonoBehaviour
         }
 
 
-        void OnTriggerExit2D(Collider2D collision)
-        {
-            Ccol.isTrigger = false;
-        }
+      
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        Box2D.isTrigger = false;
+        Debug.Log("‚·‚è”²‚¯‚½");
     }
 }
