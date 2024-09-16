@@ -10,6 +10,7 @@ public class playreControl : MonoBehaviour
     public float movespeed = 3;//移動速度
     float leftcoolTime = 0;//クールタイム(比較用)
     float coolTime = 0.5f;//クールタイム(固定値)
+    
     [SerializeField] public GameObject attckpoint;
 
     new Rigidbody2D rigidbody2D;
