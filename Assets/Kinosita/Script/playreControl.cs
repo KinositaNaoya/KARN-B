@@ -70,7 +70,7 @@ public class playreControl : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space)) 
         {
-            float jumpPower = 6.0f;
+            float jumpPower = 13.0f;
 
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpPower);
         }
