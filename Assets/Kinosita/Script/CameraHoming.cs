@@ -6,6 +6,7 @@ using UnityEngine;
 public class CameraHoming : MonoBehaviour
 {
     [SerializeField] GameObject player;
+   
     private void Update()
     {
         Vector3 newPosition = transform.position; // Œ»İ‚ÌƒJƒƒ‰‚ÌˆÊ’u‚ğ•Û
